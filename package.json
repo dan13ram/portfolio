@@ -8,7 +8,9 @@
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.4.1",
+    "normalize-scss": "^7.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,5 +32,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2",
+    "merge-stream": "^2.0.0"
   }
 }
