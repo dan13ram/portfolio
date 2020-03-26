@@ -1,16 +1,22 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, NavLink, withRouter } from 'react-router-dom';
 
 //images
-import logo from '../../Assets/img/logo.png';
+import logo from '../../assets/img/logo.png';
 
 const Header = (props) => {
     return (
-        <header className="header">
-            <div className="logo" >
-                <img src={logo} className="App-logo" alt="logo" />
+        <div className="header">
+            <div id="logo-container" >
+                <Link to="/">
+                    <img src={logo} id="logo-img" alt="logo" />
+                </Link>
             </div>
-        </header>
+            <div id="links-container" > 
+                <NavLink activeClassName="active" exact to="/" id="work-link">work</NavLink>
+                <NavLink activeClassName="active" to="/about" id="about-link">about</NavLink>
+            </div>
+        </div>
     );
 }
 

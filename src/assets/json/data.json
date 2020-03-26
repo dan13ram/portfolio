@@ -1,0 +1,35 @@
+{
+    "sixelements": {
+        "title": "six elements",
+        "description": "It is a short video titled \"six elements\".",
+        "content": [
+            { "type": "video",
+                "url": "https://vimeo.com/327434482"
+            }
+        ]
+    },
+    "foliage": {
+        "title": "foliage collage project",
+        "description": "It is a collage of foliage titled \"foliage collage project\".",
+        "content": [
+            { "type": "image",
+                "url": "foliage/wall.jpg"
+            },
+            { "type": "image",
+                "url": "foliage/pond.jpg"
+            },
+            { "type": "image",
+                "url": "foliage/stones.jpg"
+            }
+        ]
+    },
+    "trance": {
+        "title": "trance",
+        "description": "It is a short video titled \"trance\".",
+        "content": [
+            { "type": "video",
+                "url": "https://vimeo.com/327432211"
+            }
+        ]
+    }
+}

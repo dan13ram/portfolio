@@ -1,0 +1,40 @@
+.footer {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 1vh auto;
+    height: 15vh;
+    width: 90vw;
+    max-width: 1200px;
+
+    #follow-me {
+        height: 5vh;
+        font-size: 3vh;
+    }
+
+    .follow-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            background: transparent;
+            padding: 1vh;
+            transition: 0.5s;
+            height: 3vh;
+            -webkit-filter: drop-shadow(0px 0px 10px #ffffff);
+            filter: drop-shadow(0px 0px 10px #ffffff);
+            &:hover {
+                height: 3.2vh;
+            }
+        }
+    }
+
+}
+

@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './app';
 import * as serviceWorker from './serviceWorker';
 
 // css
-import './Assets/css/default.min.css';
+import './assets/css/default.min.css';
 
 
 ReactDOM.render(

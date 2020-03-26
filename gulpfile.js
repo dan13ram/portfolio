@@ -9,8 +9,8 @@ const concat = require('gulp-concat');
 const merge = require('merge-stream');
 
 
-var SCSS_SRC = './src/Assets/scss/**/*.scss';
-var SCSS_DEST = './src/Assets/css';
+var SCSS_SRC = './src/assets/scss/**/*.scss';
+var SCSS_DEST = './src/assets/css';
 
 
 // Compile SCSS
