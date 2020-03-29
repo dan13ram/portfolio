@@ -1,7 +1,7 @@
 import React from 'react';
 
 //images
-import scroll from '../../assets/img/scroll.png';
+import scroll from '../../assets/img/scroll.webp';
 
 class WelcomePage extends React.Component {
     handleOnClick = (event) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 
 //images
-import photo from '../../assets/img/photo.jpg';
+import photo from '../../assets/img/photo.webp';
 
 class AboutPage extends React.Component {
     render () {
@@ -10,7 +10,7 @@ class AboutPage extends React.Component {
                 <div className="about-page" >
                     <div id="about-photo">
                         <div id="about-img-cropper" >
-                            <img src={photo} id="about-img" alt="photo" />
+                            <img src={photo} id="about-img" alt="profile" />
                         </div>
                     </div>
                     <div id="about-content">

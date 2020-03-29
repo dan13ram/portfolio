@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, NavLink, withRouter } from 'react-router-dom';
 
 //images
-import logo from '../../assets/img/logo.png';
+import logo from '../../assets/img/logo.webp';
 
 const Header = (props) => {
     return (

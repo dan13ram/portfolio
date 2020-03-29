@@ -4,9 +4,9 @@ import WelcomePage from './welcomePage';
 import WorkDisplay from './workDisplay';
 
 //images
-import sixelements from '../../assets/img/sixelements.png';
-import trance from '../../assets/img/trance.png';
-import foliage from '../../assets/img/foliage/wall.jpg';
+import sixelements from '../../assets/img/sixelements.webp';
+import trance from '../../assets/img/trance.webp';
+import foliage from '../../assets/img/foliage/wall.webp';
 
 class WorksPage extends React.Component {
     constructor (props) {

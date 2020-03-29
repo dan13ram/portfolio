@@ -1,9 +1,9 @@
 import React from 'react';
 
 class ImageTile extends React.Component {
-    constructor (props) {
-        super(props);
-    }
+    //    constructor (props) {
+    //        super(props);
+    //    }
 
     disableRightClick = (event) => {
         event.preventDefault();

@@ -13,13 +13,16 @@
         "description": "It is a collage of foliage titled \"foliage collage project\".",
         "content": [
             { "type": "image",
-                "url": "foliage/wall.jpg"
+                "url": "foliage/relief.webp"
             },
             { "type": "image",
-                "url": "foliage/pond.jpg"
+                "url": "foliage/wall.webp"
             },
             { "type": "image",
-                "url": "foliage/stones.jpg"
+                "url": "foliage/pond.webp"
+            },
+            { "type": "image",
+                "url": "foliage/stones.webp"
             }
         ]
     },

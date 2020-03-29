@@ -1,9 +1,9 @@
 import React from 'react';
 
 //images
-//import twitter from '../../assets/img/twitter.png';
-import instagram from '../../assets/img/instagram.png';
-import vimeo from '../../assets/img/vimeo.png';
+//import twitter from '../../assets/img/twitter.webp';
+import instagram from '../../assets/img/instagram.webp';
+import vimeo from '../../assets/img/vimeo.webp';
 
 const Footer = (props) => {
     return (
