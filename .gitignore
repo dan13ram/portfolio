@@ -18,10 +18,16 @@
 .env.test.local
 .env.production.local
 
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# firebase
 .firebaserc
+.firebase/*
 
+# personal assets
+src/assets/images/*
 src/assets/img/*
+src/assets/json/*
