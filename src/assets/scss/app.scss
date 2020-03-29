@@ -8,29 +8,5 @@ html {
     overflow-x: hidden;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(40deg, grey, white, grey);
-    background-size: 300% 200%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-animation: welcomeBGAnim 10s ease infinite;
-    -moz-animation: welcomeBGAnim 10s ease infinite;
-    animation: welcomeBGAnim 10s ease infinite;
-}
-
-@-webkit-keyframes welcomeBGAnim {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 100%}
-}
-@-moz-keyframes welcomeBGAnim {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes welcomeBGAnim {
-    0%{background-position:0% 0%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 0%}
+    background: white;
 }

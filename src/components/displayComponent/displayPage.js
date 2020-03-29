@@ -21,7 +21,7 @@ function DisplayPage (props) {
                         <span> {work.description} </span>
                     </div>
                 </div> 
-                {work.content.map(item => <Tile type={item.type} url={item.url} />)}
+                {work.content.map(function (item, i){ return (<Tile key={i.toString()} type={item.type} url={item.url} />); } )}
             </div>
         );
     } else {

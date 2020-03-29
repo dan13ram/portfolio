@@ -1,4 +1,7 @@
-.welcome-page {
+.welcome-slide {
+    z-index: 20;
+    position: fixed;
+    background: lightgrey;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +13,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 7vw;
+        text-align: center;
+        font-size: 4vw;
         flex-grow: 1;
     }
     #scroll-container {
@@ -33,5 +37,12 @@
         }
     }
 
-}
+    transition-property: transform;
+    transition-duration: 1s; 
+    &.done {
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+    }
 
+}
