@@ -6,7 +6,7 @@ import sixelements from '../../assets/img/sixelements.webp';
 import trance from '../../assets/img/trance.webp';
 import foliage from '../../assets/img/foliage/wall.webp';
 
-class WorkDisplay extends React.Component {
+class WorksDisplay extends React.Component {
 
     render () {
         return (
@@ -44,5 +44,5 @@ function WorkView(props) {
     );
 }
 
-export default WorkDisplay;
+export default WorksDisplay;
 

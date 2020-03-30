@@ -22,7 +22,7 @@ class App extends React.Component{
                             <Route path="/display/:id" component={DisplayPage} />
                             <Route path="/about" exact component={AboutPage} />
                             <Redirect from='*' to='/' />
-                            <Footer/>
+                            {/* <Footer/> */}
                         </LastLocationProvider>
                 </BrowserRouter>
             </div>

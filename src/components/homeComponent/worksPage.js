@@ -1,13 +1,15 @@
 import React from 'react';
 
-import WorkDisplay from './workDisplay';
+import WorksDisplay from './worksDisplay';
+import WorksList from './worksList';
 
 
 class WorksPage extends React.Component {
     render () {
         return (
             <div className="works-page">
-                <WorkDisplay />
+                <WorksList />
+                <WorksDisplay />
             </div>
         );
     }
