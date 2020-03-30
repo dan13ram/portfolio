@@ -26,13 +26,13 @@ function WorkView(props) {
     };
     const history = useHistory();
 
-    function displayPage() {
-        history.push("/display/"+props.value);
+    function openPage() {
+        history.push("/project/"+props.value);
     }
 
     return  (
         <div className="workview-container" style={backgroundStyle}> 
-            <div className="workview" onClick={displayPage}>
+            <div className="workview" onClick={openPage}>
                 <div className="work-title">
                     <span> {props.title} </span>
                 </div>

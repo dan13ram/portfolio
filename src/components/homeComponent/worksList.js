@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class WorksList extends React.Component {
 
@@ -16,18 +16,9 @@ class WorksList extends React.Component {
 
 function WorkItem(props) {
 
-    let backgroundStyle = {
-        backgroundImage:`url(${props.cover})` 
-    };
-    const history = useHistory();
-
-    function displayPage() {
-        history.push("/display/"+props.value);
-    }
-
     return  (
-        <div className="workitem" onClick={displayPage}>
-            <span> {props.title} </span>
+        <div className="workitem">
+            <Link to={"/project/"+props.value}> {props.title} </Link>
         </div>
     );
 }

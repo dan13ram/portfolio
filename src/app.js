@@ -7,7 +7,7 @@ import Header from './components/headerComponent/header'
 import Footer from './components/footerComponent/footer'
 import HomePage from './components/homeComponent/homePage'
 import AboutPage from './components/aboutComponent/aboutPage'
-import DisplayPage from './components/displayComponent/displayPage'
+import ProjectPage from './components/projectComponent/projectPage'
 
 
 class App extends React.Component{
@@ -19,10 +19,10 @@ class App extends React.Component{
                         <LastLocationProvider watchOnlyPathname>
                             <Header/>
                             <Route path="/" exact component={HomePage} />
-                            <Route path="/display/:id" component={DisplayPage} />
+                            <Route path="/project/:id" component={ProjectPage} />
                             <Route path="/about" exact component={AboutPage} />
                             <Redirect from='*' to='/' />
-                            {/* <Footer/> */}
+                            <Footer/>
                         </LastLocationProvider>
                 </BrowserRouter>
             </div>

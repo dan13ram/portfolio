@@ -1,14 +1,16 @@
 .home-page {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
     align-items: center;
+    width: 100vw;
+    height: 92vh;
 }
 
 .works-page {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1200px;
     width: 100vw;
+    height: 84vh;
 }

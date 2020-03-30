@@ -13,9 +13,11 @@ class HomePage extends React.Component {
 
         if (isFirstLoad) {
             return (
-                <div className="home-page"> 
+                <div className="home-page-container"> 
                     <WelcomeSlide />
-                    <WorksPage />
+                    <div className="home-page"> 
+                        <WorksPage />
+                    </div>
                 </div>
             );
         } else {

@@ -1,10 +1,10 @@
-.display-page-container {
+.project-page-container {
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    .display-page {
+    .project-page {
         margin-top: 5vh;
         width: 90vw;
         max-width: 1200px;
@@ -13,14 +13,14 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        .display-title {
+        .project-title {
             font-size: 4vh;
             height: 10vh;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .display-description {
+        .project-description {
             width: 60vw;
         }
     }

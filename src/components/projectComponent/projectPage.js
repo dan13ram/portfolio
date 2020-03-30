@@ -6,18 +6,18 @@ import { useParams, Redirect } from 'react-router-dom';
 import * as data from '../../assets/json/data.json'
 
 
-function DisplayPage (props) {
+function ProjectPage (props) {
 
     let { id } = useParams();
     if (id in data.default ) {
         let work = data.default[id];
         return (
-            <div className="display-page-container"> 
-                <div className="display-page"> 
-                    <div className="display-title"> 
+            <div className="project-page-container"> 
+                <div className="project-page"> 
+                    <div className="project-title"> 
                         <span> {work.title} </span>
                     </div>
-                    <div className="display-description">
+                    <div className="project-description">
                         <span> {work.description} </span>
                     </div>
                 </div> 
@@ -31,5 +31,5 @@ function DisplayPage (props) {
 
 }
 
-export default DisplayPage;
+export default ProjectPage;
 

@@ -7,12 +7,10 @@ import vimeo from '../../assets/img/vimeo.webp';
 
 const Footer = (props) => {
     return (
-        <div className="footer">
-            <div id="follow-me">
-                <span> Follow me </span>
-            </div>
-            <div className="follow-links">
-                {/*
+        <div className="footer-container">
+            <div className="footer">
+                <div className="follow-links">
+                    {/*
                 <a href="" id="twitter" target="_blank" rel="noopener noreferrer">
                     <img src={twitter} className="follow-img" id="twitter-img" alt="twitter" />
                 </a>
@@ -25,6 +23,7 @@ const Footer = (props) => {
                 </a>
             </div>
         </div>
+    </div>
     );
 }
 
