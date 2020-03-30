@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, NavLink, withRouter } from 'react-router-dom';
 
 //images
-import logo from '../../assets/img/logo.webp';
+import {ReactComponent as Logo} from '../../assets/svg/logo.svg';
 
 const Header = (props) => {
     return (
@@ -10,7 +10,10 @@ const Header = (props) => {
             <div className="header">
                 <div id="logo-container" >
                     <Link to="/">
-                        <img src={logo} id="logo-img" alt="logo" />
+                        <Logo id="logo-img" />
+                    </Link>
+                    <Link to="/">
+                        <span id="logo-txt"> littlehoodedcreature </span>
                     </Link>
                 </div>
                 <div id="links-container" > 

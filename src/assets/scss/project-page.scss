@@ -1,14 +1,15 @@
 .project-page-container {
+    padding-top: 8vh;
+    scroll-snap-align: start;  
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     .project-page {
-        margin-top: 5vh;
         width: 90vw;
         max-width: 1200px;
-        height: 40vh;
+        height: 20vh;
         display: flex;
         justify-content: center;
         align-items: center;

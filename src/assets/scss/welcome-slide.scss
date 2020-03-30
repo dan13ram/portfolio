@@ -1,6 +1,8 @@
 .welcome-slide {
     z-index: 20;
     position: fixed;
+    top: 0;
+    left: 0;
     background: lightgrey;
     display: flex;
     justify-content: center;
@@ -37,10 +39,10 @@
         }
     }
 
-    transition-property: opacity;
+    transition-property: transform;
     transition-duration: 1s; 
     &.open {
-        opacity: 0;
+        transform: translateY(-100%);
     }
 
 }

@@ -1,18 +1,22 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import Tile from './tile';
 import { useParams, Redirect } from 'react-router-dom';
 
 //json data
-import * as data from '../../assets/json/data.json'
+import * as data from '../../../assets/json/data.json'
 
 
 function ProjectPage (props) {
+    const projectPage = useRef();
+    useEffect(() => {
+        projectPage.current && projectPage.current.scrollIntoView();
+    }, []);
 
     let { id } = useParams();
     if (id in data.default ) {
         let work = data.default[id];
         return (
-            <div className="project-page-container"> 
+            <div className="project-page-container" ref={projectPage}> 
                 <div className="project-page"> 
                     <div className="project-title"> 
                         <span> {work.title} </span>

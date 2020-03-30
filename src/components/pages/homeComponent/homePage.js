@@ -6,6 +6,16 @@ import WorksPage from './worksPage';
 
 
 class HomePage extends React.Component {
+    
+    constructor (props) {
+        super(props);
+        this.homePage = React.createRef();
+    }
+
+    componentDidMount() {
+        this.homePage.current && this.homePage.current.scrollIntoView();
+    }
+
     render () {
 
         let lastLocation = this.props.lastLocation;
@@ -15,14 +25,14 @@ class HomePage extends React.Component {
             return (
                 <div className="home-page-container"> 
                     <WelcomeSlide />
-                    <div className="home-page"> 
+                    <div className="home-page" ref={this.homePage}> 
                         <WorksPage />
                     </div>
                 </div>
             );
         } else {
             return (
-                <div className="home-page"> 
+                <div className="home-page" ref={this.homePage}> 
                     <WorksPage />
                 </div>
             );
