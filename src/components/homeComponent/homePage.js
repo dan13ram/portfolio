@@ -1,4 +1,5 @@
 import React from 'react';
+import { withLastLocation } from 'react-router-last-location';
 
 import WelcomeSlide from './welcomeSlide';
 import WorksPage from './worksPage';
@@ -6,16 +7,28 @@ import WorksPage from './worksPage';
 
 class HomePage extends React.Component {
     render () {
-        return (
-            <div className="home-page"> 
-                <WelcomeSlide />
-                <WorksPage />
-            </div>
-        );
+
+        let lastLocation = this.props.lastLocation;
+        let isFirstLoad = lastLocation == null;
+
+        if (isFirstLoad) {
+            return (
+                <div className="home-page"> 
+                    <WelcomeSlide />
+                    <WorksPage />
+                </div>
+            );
+        } else {
+            return (
+                <div className="home-page"> 
+                    <WorksPage />
+                </div>
+            );
+        }
     }
 }
 
-export default HomePage;
+export default withLastLocation(HomePage);
 
 
 
