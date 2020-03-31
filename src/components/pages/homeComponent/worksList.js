@@ -10,9 +10,21 @@ class WorksList extends React.Component {
     render () {
         return (
             <div className="works-list"> 
-                <span id="works-list-header"> List of works </span>
+                <span id="works-list-header"> WORK </span>
                 <hr />
                 <div className="work-items">
+                    <WorkItem title="six elements" value="sixelements"/>
+                    <WorkItem title="foliage collage project" value="foliage"/>
+                    <WorkItem title="trance" value="trance"/>
+                    <WorkItem title="six elements" value="sixelements"/>
+                    <WorkItem title="foliage collage project" value="foliage"/>
+                    <WorkItem title="trance" value="trance"/>
+                    <WorkItem title="six elements" value="sixelements"/>
+                    <WorkItem title="foliage collage project" value="foliage"/>
+                    <WorkItem title="trance" value="trance"/>
+                    <WorkItem title="six elements" value="sixelements"/>
+                    <WorkItem title="foliage collage project" value="foliage"/>
+                    <WorkItem title="trance" value="trance"/>
                     <WorkItem title="six elements" value="sixelements"/>
                     <WorkItem title="foliage collage project" value="foliage"/>
                     <WorkItem title="trance" value="trance"/>
@@ -28,7 +40,7 @@ function WorkItem(props) {
 
     return  (
         <div className="workitem">
-            <Link to={"/project/"+props.value}> -- {props.title} -- </Link>
+            <Link to={"/project/"+props.value}> {props.title} </Link>
         </div>
     );
 }

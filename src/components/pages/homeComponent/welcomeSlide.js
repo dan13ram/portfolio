@@ -26,13 +26,10 @@ class WelcomeSlide extends React.Component {
                 <span id="welcome-content">
                     Hi, There!
                     <br/>
-                    Click anywhere to
+                    Click anywhere to enter
                     <br />
-                    enter
+                    the world of littlehoodedcreature!
                     <br />
-                    the world of 
-                    <br />
-                    littlehoodedcreature!
                 </span>
             </div>
         );
