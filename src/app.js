@@ -5,6 +5,7 @@ import { LastLocationProvider } from 'react-router-last-location';
 // components
 import Header from './components/headerComponent/header'
 import Footer from './components/footerComponent/footer'
+import NavBar from './components/navBarComponent/navBar'
 import HomePage from './components/pages/homeComponent/homePage'
 import AboutPage from './components/pages/aboutComponent/aboutPage'
 import ProjectPage from './components/pages/projectComponent/projectPage'
@@ -24,6 +25,7 @@ class App extends React.Component{
                 <BrowserRouter>
                         <LastLocationProvider watchOnlyPathname>
                             <Header/>
+                            <NavBar/>
                             <div className="main-content" ref={this.mainContent}>
                             <Route path="/" exact component={HomePage} />
                             <Route path="/project/:id" component={ProjectPage} />

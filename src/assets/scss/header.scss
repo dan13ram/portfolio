@@ -6,10 +6,11 @@
     top: 0;
     left: 0;
     right: 0;
-    background: $bgcolor;
+    background: $white;
     height: 8vh;
     width: 100vw;
     display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -27,7 +28,7 @@
         margin-right: 2vh;
         font-size: 2vh;
         a {
-            color: $textcolor;
+            color: $grey;
             padding: 1vh;
             text-decoration: none;
             transition: 0.5s;
@@ -59,7 +60,7 @@
             justify-content: center;
         }
         #logo-txt { 
-            color: $textcolor;
+            color: $grey;
             font-size: 2.1vh;
         }
         #logo-img {
@@ -71,10 +72,10 @@
             -webkit-filter: drop-shadow(0px 0px 10px #ffffff);
             filter: drop-shadow(0px 0px 10px #ffffff);
             g {
-                fill: $logocolor;
+                fill: $pink;
             }
             path {
-                stroke: $logocolor;
+                stroke: $pink;
             }
         }
     }
