@@ -49,6 +49,11 @@ class NavBar extends React.Component {
                         <WorkItem title="six elements" value="sixelements" toggleOpen={this.toggleOpen}/>
                         <WorkItem title="foliage collage project" value="foliage" toggleOpen={this.toggleOpen}/>
                         <WorkItem title="trance" value="trance" toggleOpen={this.toggleOpen}/>
+                        <WorkItem title="trance" value="trance" toggleOpen={this.toggleOpen}/>
+                        <WorkItem title="trance" value="trance" toggleOpen={this.toggleOpen}/>
+                        <WorkItem title="trance" value="trance" toggleOpen={this.toggleOpen}/>
+                        <WorkItem title="trance" value="trance" toggleOpen={this.toggleOpen}/>
+                        <WorkItem title="trance" value="trance" toggleOpen={this.toggleOpen}/>
                     </div>
                     <NavLink activeClassName="active" exact to="/about" className="about-link">
                         about
@@ -65,7 +70,11 @@ function WorkItem(props) {
 
     return  (
         <div className="workitem" onClick={props.toggleOpen}>
-            <Link to={"/project/"+props.value}> {props.title} </Link>
+            <Link to={"/project/"+props.value}> 
+                <p className="workitem-title"> {props.title} </p>
+                <p className="workitem-desc"> -- {props.title} -- </p>
+
+            </Link>
         </div>
     );
 }

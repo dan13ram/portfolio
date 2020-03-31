@@ -12,7 +12,7 @@ $navBarWidth: 20vw;
     box-shadow: 0 0 4px #898989;
     z-index: 10;
     position: fixed;
-    background: white;
+    background: $white;
     left: 0;
     top: 0;
     bottom: 0;
@@ -45,6 +45,10 @@ $navBarWidth: 20vw;
                 visibility: hidden;
                 width: 0;
             }
+            transition: 0.25s;
+            &:hover {
+                color: $darkgrey;
+            }
         } 
 
         #logo-img {
@@ -54,16 +58,22 @@ $navBarWidth: 20vw;
             background: transparent;
             -webkit-filter: drop-shadow(0px 0px 10px #ffffff);
             filter: drop-shadow(0px 0px 10px #ffffff);
+            transition: 0.25s;
             g {
                 fill: $pink;
             }
-            path {
-                stroke: $pink;
+            &:hover {
+                g {
+                    fill: $darkpink;
+                }
+
             }
+
         }
     }
 
     .nav-links-container {
+        height: 77vh;
         margin-top: 2vh;
         margin-bottom: 2vh;
         display: flex;
@@ -71,7 +81,10 @@ $navBarWidth: 20vw;
         align-items: center;
         width: 100%;
         flex-grow: 1;
+        transition: 0.25s;
         .work-link {
+            margin-left: 1vw;
+            align-self: flex-start;
             display: flex;
             .nav-toggle {
                 color: $pink;
@@ -79,7 +92,7 @@ $navBarWidth: 20vw;
                 cursor: pointer;
                 transition: 0.25s;
                 &:hover{
-                    transform: rotate(360deg);
+                    color: $darkpink;
                 }
             }
             margin-top: 1vh;
@@ -89,6 +102,10 @@ $navBarWidth: 20vw;
                 text-decoration: none;
                 &.active {
                     font-weight: bold;
+                }
+                transition: 0.25s;
+                &:hover {
+                    color: $darkgrey;
                 }
             }
             font-size: 2vh;
@@ -100,33 +117,69 @@ $navBarWidth: 20vw;
             color: $grey;
             text-decoration: none;
             font-size: 2vh;
+            align-self: flex-start;
+            margin-left: 1vw;
             &.active {
                 font-weight: bold;
             }
+            transition: 0.25s;
+            &:hover {
+                color: $darkgrey;
+
+            }
         }
         .work-items {
+            background: $offwhite;
             margin-top: 1vh;
             margin-bottom: 1vh;
             flex-grow: 1;
             width: $navBarWidth - 2vw;
-            box-shadow: 0 0 4px #898989 inset;
+            max-width: $navBarWidth - 2vw;
             overflow-x: hidden;
             overflow-y: scroll;
+            font-size: 1.8vh;
             .workitem {
-                padding: 1vh 1vw 1vh 1vw;
+                height: 10vh;
+                padding: 0 1vw 0 1vw;
+                .workitem-desc {
+                    font-size: 1.6vh;
+                }
                 a {
                     color: $grey;
                     text-decoration: none;
+                    transition: 0.25s;
+                    &:hover {
+                        color: $darkgrey;
+                    }
                 }
             }
-            transition: 0.5s;
             &.closed {
                 flex-grow:  0;
                 max-height: 0;
             }
+            &::-webkit-scrollbar {
+                width: 5px;
+            }
+
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: $pink;
+            }
+
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: $darkpink;
+            }
         }
     }
     .follow-links {
+        margin-left: 1vw;
+        align-self: flex-start;
         height: 9vh;
         display: flex;
         align-items: flex-start;
@@ -138,10 +191,13 @@ $navBarWidth: 20vw;
             padding-bottom: 2vh;
             height: 2.5vh;
             g {
-                fill: #898989;
+                fill: $grey;
             }
-            path {
-                stroke: #898989;
+            transition: 0.25s;
+            &:hover {
+                g {
+                    fill: $darkgrey;
+                }
             }
         }
     }
@@ -154,22 +210,12 @@ $navBarWidth: 20vw;
         }
         .work-link {
             width: $navBarWidth - 3vw;
-            padding-left: 2vw;
+            padding-left: 1vw;
             padding-right: 1vw;
             justify-content: space-between;
             .nav-toggle {
                 transform: rotate(90deg);
-                &:hover{
-                    transform: rotate(450deg);
-                }
             }
-        }
-        .about-link {
-            align-self: flex-start;
-            margin-left: 2vw;
-        }
-        .follow-links {
-            margin-left: 2vw;
         }
     }
 }

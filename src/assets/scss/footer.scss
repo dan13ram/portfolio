@@ -1,3 +1,4 @@
+@import 'colors';
 
 .footer-container {
     scroll-snap-align: end;  
@@ -22,13 +23,13 @@
     width: 100vw;
 
     #top-button {
-        padding: 1vh;
+        color: $pink;
         text-decoration: none;
-        transition: 0.5s;
-        transition-property: font-size;
+        cursor: pointer;
+        font-size: 4vh;
+        transition: 0.25s;
         &:hover {
-            cursor: pointer;
-            font-size: 2.1vh;
+            color: $darkpink;
         }
     }
 

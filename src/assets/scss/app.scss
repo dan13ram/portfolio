@@ -1,3 +1,5 @@
+@import 'colors';
+
 html,body {
     scroll-behavior: smooth;
     margin: 0;
@@ -12,5 +14,23 @@ html,body {
     overflow-y: scroll;
     width: 100vw;
     height: 100vh;
-    background: white;
+    background: $white;
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: $pink;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: $darkpink;
+    }
 }
