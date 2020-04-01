@@ -2,8 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import Tile from './tileComponent/tile';
 import { useParams, Redirect } from 'react-router-dom';
 
-//json data
-import * as data from '../../../assets/json/data.json'
+import { data } from '../../../constants';
 
 function ProjectPage (props) {
     const projectPage = useRef();
@@ -12,8 +11,8 @@ function ProjectPage (props) {
     }, []);
 
     let { id } = useParams();
-    if (id in data.default ) {
-        let work = data.default[id];
+    if (id in data) {
+        let work = data[id];
         return (
             <div className="project-page-container" ref={projectPage}> 
                 <div className="project-page"> 
@@ -25,11 +24,9 @@ function ProjectPage (props) {
                     </div>
                 </div> 
                 {
-                    work.content.map(function (item, i){
-                        return (
-                            <Tile key={i.toString()} type={item.type} url={item.url} />
-                        ); 
-                    })
+                    work.content.map((item, i) => (
+                        <Tile key={i.toString()} item={item} />
+                    ))
                 }
             </div>
         );

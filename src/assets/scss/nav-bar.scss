@@ -25,9 +25,10 @@ $navBarWidth: 20vw;
 
     .logo-container {
         display: flex;
-        flex-direction: row;
         align-items: center;
-        justify-content: center;
+        align-self: flex-start;
+        margin-left: 1vw;
+        justify-content: flex-start;
 
         height: 8vh;
         a {
@@ -40,7 +41,7 @@ $navBarWidth: 20vw;
         }
         .logo-txt { 
             color: $grey;
-            font-size: 2vh;
+            font-size: min(1.2vw, 1.8vw);
             &.closed {
                 display: none;
             }
@@ -136,12 +137,24 @@ $navBarWidth: 20vw;
             max-width: $navBarWidth - 2vw;
             overflow-x: hidden;
             overflow-y: scroll;
-            font-size: 1.8vh;
+            transition: 0.25s;
             .workitem {
+                display: flex;
+                align-items: center;
                 height: 10vh;
+                margin: 0;
                 padding: 0 1vw 0 1vw;
+                .workitem-title{
+                    padding: 0;
+                    margin: 0;
+                    font-size: 1.8vh;
+                }
                 .workitem-desc {
-                    font-size: 1.6vh;
+                    opacity: 0.7;
+                    padding: 0;
+                    margin: 0;
+                    padding-left: 1vw;
+                    font-size: 1.5vh;
                 }
                 a {
                     color: $grey;
@@ -204,13 +217,8 @@ $navBarWidth: 20vw;
     &.open{
         width: $navBarWidth;
         align-items: flex-start;
-        .logo-container {
-            margin-left: 2vw;
-        }
         .work-link {
-            width: $navBarWidth - 3vw;
-            padding-left: 1vw;
-            padding-right: 1vw;
+            width: $navBarWidth - 2vw;
             justify-content: space-between;
             .nav-toggle {
                 transform: rotate(90deg);

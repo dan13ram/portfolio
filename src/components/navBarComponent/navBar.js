@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, NavLink } from "react-router-dom";
 
+import { data } from '../../constants';
+
 //images
 import {ReactComponent as Instagram} from '../../assets/svg/instagram.svg';
 import {ReactComponent as Vimeo} from '../../assets/svg/vimeo.svg';
@@ -46,14 +48,11 @@ class NavBar extends React.Component {
                         </div>
                     </div>
                     <div className="work-items closed" ref={this.workItems}>
-                        <WorkItem title="six elements" value="sixelements" toggleOpen={this.toggleOpen}/>
-                        <WorkItem title="foliage collage project" value="foliage" toggleOpen={this.toggleOpen}/>
-                        <WorkItem title="trance" value="trance" toggleOpen={this.toggleOpen}/>
-                        <WorkItem title="trance" value="trance" toggleOpen={this.toggleOpen}/>
-                        <WorkItem title="trance" value="trance" toggleOpen={this.toggleOpen}/>
-                        <WorkItem title="trance" value="trance" toggleOpen={this.toggleOpen}/>
-                        <WorkItem title="trance" value="trance" toggleOpen={this.toggleOpen}/>
-                        <WorkItem title="trance" value="trance" toggleOpen={this.toggleOpen}/>
+                        {
+                            Object.keys(data).map((item, i) => (
+                                <WorkItem key={i.toString()} value={item} toggleOpen={this.toggleOpen}/>
+                            ))
+                        }
                     </div>
                     <NavLink activeClassName="active" exact to="/about" className="about-link">
                         about
@@ -68,12 +67,13 @@ class NavBar extends React.Component {
 
 function WorkItem(props) {
 
+    let work = data[props.value];
+
     return  (
         <div className="workitem" onClick={props.toggleOpen}>
-            <Link to={"/project/"+props.value}> 
-                <p className="workitem-title"> {props.title} </p>
-                <p className="workitem-desc"> -- {props.title} -- </p>
-
+            <Link to={"/project/"+work.url}> 
+                <p className="workitem-title"> {work.title} </p>
+                <p className="workitem-desc"> {work.subtitle} </p>
             </Link>
         </div>
     );

@@ -7,10 +7,9 @@ class ImageTile extends React.Component {
     }
 
     render () {
-        let imageUrl = require('../../../../assets/img/' + this.props.url);
         return (
             <div className="tile-container"> 
-                <img onContextMenu={this.disableRightClick} className="img-tile" src={imageUrl} alt={this.props.url} /> 
+                <img onContextMenu={this.disableRightClick} className="img-tile" src={this.props.url} alt={this.props.url.toString()} /> 
             </div>
         );
     }

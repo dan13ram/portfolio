@@ -28,6 +28,5 @@ yarn-error.log*
 .firebase/*
 
 # personal assets
-src/assets/images/*
 src/assets/img/*
-src/assets/json/*
+src/assets/images/*
