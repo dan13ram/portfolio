@@ -31,7 +31,7 @@
     height: 60%;
     border-radius: 10px;
     background: $purewhite no-repeat center center;
-    color: black;
+    color: $grey;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -45,18 +45,20 @@
         align-items: center;
         opacity: 1;
         .work-title {
-            transition: font-size 0.5s;
+            transition: 0.5s;
             font-size: 4vh;
         }
         .work-discription {
-            transition: font-size 0.5s;
+            transition: 0.5s;
             font-size: 1.8vh;
         }
         &:hover{
             .work-title {
+                color: $darkgrey;
                 font-size: 4.2vh;
             }
             .work-discription {
+                color: $darkgrey;
                 font-size: 2vh;
             }
         }
