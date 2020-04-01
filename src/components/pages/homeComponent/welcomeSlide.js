@@ -1,4 +1,5 @@
 import React from 'react';
+import WelcomeCanvas from './WelcomeCanvas';
 
 class WelcomeSlide extends React.Component {
     constructor (props) {
@@ -23,6 +24,7 @@ class WelcomeSlide extends React.Component {
     render () {
         return (
             <div className={this.state.open===true ? "welcome-slide open" : "welcome-slide"} onClick={this.signalStart} onTransitionEnd={this.signalDone} ref={this.slideRef}> 
+                <WelcomeCanvas />
                 <span id="welcome-content">
                     Hi, There!
                     <br/>
