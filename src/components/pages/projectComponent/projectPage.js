@@ -1,10 +1,9 @@
 import React, { useRef, useEffect } from 'react';
-import Tile from './tile';
+import Tile from './tileComponent/tile';
 import { useParams, Redirect } from 'react-router-dom';
 
 //json data
 import * as data from '../../../assets/json/data.json'
-
 
 function ProjectPage (props) {
     const projectPage = useRef();
@@ -25,11 +24,16 @@ function ProjectPage (props) {
                         <span> {work.description} </span>
                     </div>
                 </div> 
-                {work.content.map(function (item, i){ return (<Tile key={i.toString()} type={item.type} url={item.url} />); } )}
+                {
+                    work.content.map(function (item, i){
+                        return (
+                            <Tile key={i.toString()} type={item.type} url={item.url} />
+                        ); 
+                    })
+                }
             </div>
         );
     } else {
-
         return <Redirect to="/"/>;
     }
 

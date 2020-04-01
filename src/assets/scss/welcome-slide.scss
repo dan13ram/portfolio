@@ -1,9 +1,11 @@
+@import 'config';
+
 .welcome-slide {
-    z-index: 20;
+    z-index: 10;
     position: fixed;
     top: 0;
     left: 0;
-    background: lightgrey;
+    background: $white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,6 +14,7 @@
     height: 100vh;
     max-width:100%;
     #welcome-content {
+        z-index: 10;
         display: flex;
         justify-content: center;
         align-items: center;

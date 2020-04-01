@@ -1,8 +1,8 @@
 import React from 'react';
 import { withLastLocation } from 'react-router-last-location';
 
-import WelcomeSlide from './welcomeSlide';
-import WorksPage from './worksPage';
+import WelcomeSlide from './welcomeComponent/welcomeSlide';
+import WorksPage from './worksComponent/worksPage';
 
 
 class HomePage extends React.Component {

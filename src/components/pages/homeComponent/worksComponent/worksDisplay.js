@@ -2,9 +2,9 @@ import React from 'react';
 import { useHistory } from "react-router-dom";
 
 //images
-import sixelements from '../../../assets/img/sixelements.webp';
-import trance from '../../../assets/img/trance.webp';
-import foliage from '../../../assets/img/foliage/wall.webp';
+import sixelements from '../../../../assets/img/sixelements.webp';
+import trance from '../../../../assets/img/trance.webp';
+import foliage from '../../../../assets/img/foliage/wall.webp';
 
 class WorksDisplay extends React.Component {
 

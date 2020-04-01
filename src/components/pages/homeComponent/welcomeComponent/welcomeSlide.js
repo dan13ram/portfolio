@@ -1,5 +1,5 @@
 import React from 'react';
-import WelcomeCanvas from './WelcomeCanvas';
+import WelcomeCanvas from './welcomeCanvas';
 
 class WelcomeSlide extends React.Component {
     constructor (props) {

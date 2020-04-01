@@ -1,17 +1,16 @@
 import React from 'react';
 
 class ImageTile extends React.Component {
-    //    constructor (props) {
-    //        super(props);
-    //    }
 
     disableRightClick = (event) => {
         event.preventDefault();
     }
+
     render () {
+        let imageUrl = require('../../../../assets/img/' + this.props.url);
         return (
             <div className="tile-container"> 
-                <img onContextMenu={this.disableRightClick} className="img-tile" src={require('../../../assets/img/' + this.props.url)} alt={this.props.url} /> 
+                <img onContextMenu={this.disableRightClick} className="img-tile" src={imageUrl} alt={this.props.url} /> 
             </div>
         );
     }
