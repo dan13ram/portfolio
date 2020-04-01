@@ -33,11 +33,13 @@ function WorkView(props) {
     return  (
         <div className="workview-container" style={backgroundStyle}> 
             <div className="workview" onClick={openPage}>
+                <div className="workview-content">
                 <div className="work-title">
                     <span> {props.title} </span>
                 </div>
                 <div className="work-discription">
                     <span> -- "{props.title}" -- </span>
+                </div>
                 </div>
             </div>
         </div>

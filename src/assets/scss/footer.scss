@@ -1,4 +1,4 @@
-@import 'colors';
+@import 'config';
 
 .footer-container {
     scroll-snap-align: end;  
@@ -6,7 +6,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: white;
+    background: $purewhite;
     height: 16vh;
     width: 100vw;
     display: flex;
@@ -28,6 +28,7 @@
         cursor: pointer;
         font-size: 4vh;
         transition: 0.25s;
+        transform: rotate(180deg);
         &:hover {
             color: $darkpink;
         }

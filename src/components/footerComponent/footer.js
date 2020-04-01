@@ -10,7 +10,7 @@ const Footer = (props) => {
     return (
         <div className="footer-container">
             <div className="footer">
-                <span id="top-button" onClick={backToTop}> &#x25B2; </span>
+                <span id="top-button" onClick={backToTop}> &#x25BE; </span>
             </div>
         </div>
     );

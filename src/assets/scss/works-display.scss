@@ -1,4 +1,4 @@
-@import 'colors';
+@import 'config';
 
 .work-display {
     align-self: flex-end;
@@ -26,26 +26,41 @@
 }
 
 .workview {
-    display: flex;
     opacity: 0;
     width: 50%;
     height: 60%;
     border-radius: 10px;
-    background: $white no-repeat center center;
+    background: $purewhite no-repeat center center;
     color: black;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     position: relative;
-    transition-property: opacity;
-    transition-duration: 0.2s;
-    .work-title {
+    transition: opacity 0.25s;
+    .workview-content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         opacity: 1;
-        font-size: 4vh;
-    }
-    .work-description {
-        opacity: 1;
-        font-size: 1.8vh;
+        .work-title {
+            transition: font-size 0.5s;
+            font-size: 4vh;
+        }
+        .work-discription {
+            transition: font-size 0.5s;
+            font-size: 1.8vh;
+        }
+        &:hover{
+            .work-title {
+                font-size: 4.2vh;
+            }
+            .work-discription {
+                font-size: 2vh;
+            }
+        }
+
     }
 }
 

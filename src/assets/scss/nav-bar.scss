@@ -1,4 +1,4 @@
-@import 'colors';
+@import 'config';
 
 $navBarWidth: 20vw;
 
@@ -12,7 +12,7 @@ $navBarWidth: 20vw;
     box-shadow: 0 0 4px #898989;
     z-index: 10;
     position: fixed;
-    background: $white;
+    background: $purewhite;
     left: 0;
     top: 0;
     bottom: 0;
@@ -130,7 +130,7 @@ $navBarWidth: 20vw;
             }
         }
         .work-items {
-            background: $offwhite;
+            background: $purewhite;
             margin-top: 1vh;
             margin-bottom: 1vh;
             flex-grow: 1;
