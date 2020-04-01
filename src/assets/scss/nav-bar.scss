@@ -40,11 +40,9 @@ $navBarWidth: 20vw;
         }
         .logo-txt { 
             color: $grey;
-            font-size: 2.1vh;
+            font-size: 2vh;
             &.closed {
-                opacity: 0;
-                visibility: hidden;
-                width: 0;
+                display: none;
             }
             transition: 0.25s;
             &:hover {

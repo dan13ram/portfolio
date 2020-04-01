@@ -3,7 +3,6 @@ import { Redirect, BrowserRouter, Route } from 'react-router-dom';
 import { LastLocationProvider } from 'react-router-last-location';
 
 // components
-import Header from './components/headerComponent/header'
 import Footer from './components/footerComponent/footer'
 import NavBar from './components/navBarComponent/navBar'
 import HomePage from './components/pages/homeComponent/homePage'
@@ -24,7 +23,6 @@ class App extends React.Component{
             <div className="app">
                 <BrowserRouter>
                         <LastLocationProvider watchOnlyPathname>
-                            <Header/>
                             <NavBar/>
                             <div className="main-content" ref={this.mainContent}>
                             <Route path="/" exact component={HomePage} />

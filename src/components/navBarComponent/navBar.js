@@ -33,7 +33,7 @@ class NavBar extends React.Component {
                         <Logo id="logo-img"/>
                     </Link>
                     <Link to="/" className="logo-txt closed" ref={this.logoText}>
-                        &nbsp;littlehoodedcreature
+                        littlehoodedcreature
                     </Link>
                 </div>
                 <div className="nav-links-container"> 
