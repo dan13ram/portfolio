@@ -3,17 +3,29 @@ import ReactPlayer from 'react-player';
 
 class VideoTile extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.player = React.createRef();
+    }
+
+    ready = (event) => {
+        this.player.current.classList.add("ready");
+    }
+
     render () {
         return (
-            <div className="tile-container"> 
+            <div className="tile"> 
                 <div className="video-tile"> 
-                    <ReactPlayer
-                        url={this.props.url}
-                        className='react-player'
-                        playing={false}
-                        width='100%'
-                        height='100%'
-                    />
+                    <div className="video-tile-inner" ref={this.player}> 
+                        <ReactPlayer
+                            url={this.props.url}
+                            className='react-player'
+                            playing={false}
+                            width='100%'
+                            height='100%'
+                            onReady={this.ready}
+                        />
+                    </div>
                 </div>
             </div>
         );

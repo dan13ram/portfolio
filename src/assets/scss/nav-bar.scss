@@ -21,7 +21,7 @@ $navBarWidth: 20vw;
     border-radius: 0 10px 10px 0;
     width: 75px;
     overflow-x: hidden;
-    transition: 0.25s;
+    transition: 0.25s ease-in-out;
 
     .logo-container {
         display: flex;
@@ -45,7 +45,7 @@ $navBarWidth: 20vw;
             &.closed {
                 display: none;
             }
-            transition: 0.25s;
+            transition: 0.25s ease-in-out;
             &:hover {
                 color: $darkgrey;
             }
@@ -58,7 +58,7 @@ $navBarWidth: 20vw;
             background: transparent;
             -webkit-filter: drop-shadow(0px 0px 10px #ffffff);
             filter: drop-shadow(0px 0px 10px #ffffff);
-            transition: 0.25s;
+            transition: 0.25s ease-in-out;
             g {
                 fill: $pink;
             }
@@ -81,7 +81,7 @@ $navBarWidth: 20vw;
         align-items: center;
         width: 100%;
         flex-grow: 1;
-        transition: 0.25s;
+        transition: 0.25s ease-in-out;
         .work-link {
             margin-left: 1vw;
             align-self: flex-start;
@@ -90,7 +90,7 @@ $navBarWidth: 20vw;
                 color: $pink;
                 right: 0;
                 cursor: pointer;
-                transition: 0.25s;
+                transition: 0.25s ease-in-out;
                 &:hover{
                     color: $darkpink;
                 }
@@ -103,7 +103,7 @@ $navBarWidth: 20vw;
                 &.active {
                     font-weight: bold;
                 }
-                transition: 0.25s;
+                transition: 0.25s ease-in-out;
                 &:hover {
                     color: $darkgrey;
                 }
@@ -122,7 +122,7 @@ $navBarWidth: 20vw;
             &.active {
                 font-weight: bold;
             }
-            transition: 0.25s;
+            transition: 0.25s ease-in-out;
             &:hover {
                 color: $darkgrey;
 
@@ -137,7 +137,7 @@ $navBarWidth: 20vw;
             max-width: $navBarWidth - 2vw;
             overflow-x: hidden;
             overflow-y: scroll;
-            transition: 0.25s;
+            transition: 0.25s ease-in-out;
             .workitem {
                 display: flex;
                 align-items: center;
@@ -159,7 +159,7 @@ $navBarWidth: 20vw;
                 a {
                     color: $grey;
                     text-decoration: none;
-                    transition: 0.25s;
+                    transition: 0.25s ease-in-out;
                     &:hover {
                         color: $darkgrey;
                     }
@@ -205,7 +205,7 @@ $navBarWidth: 20vw;
             g {
                 fill: $grey;
             }
-            transition: 0.25s;
+            transition: 0.25s ease-in-out;
             &:hover {
                 g {
                     fill: $darkgrey;

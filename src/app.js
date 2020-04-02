@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, BrowserRouter, Route } from 'react-router-dom';
+import { Redirect, BrowserRouter, Switch, Route } from 'react-router-dom';
 import { LastLocationProvider } from 'react-router-last-location';
 
 // components
@@ -22,16 +22,22 @@ class App extends React.Component{
         return (
             <div className="app">
                 <BrowserRouter>
-                        <LastLocationProvider watchOnlyPathname>
-                            <NavBar/>
-                            <div className="main-content" ref={this.mainContent}>
-                            <Route path="/" exact component={HomePage} />
-                            <Route path="/project/:id" component={ProjectPage} />
-                            <Route path="/about" exact component={AboutPage} />
-                            <Redirect from='*' to='/' />
-                            </div>
-                            <Footer content={this.mainContent}/>
-                        </LastLocationProvider>
+                    <LastLocationProvider watchOnlyPathname>
+                        <NavBar/>
+                        <div className="main-content" ref={this.mainContent}>
+                            <Route render =
+                                {({location}) => (
+                                    <Switch location={location}>
+                                        <Route path="/" exact component={HomePage} />
+                                        <Route path="/project/:id" component={ProjectPage} />
+                                        <Route path="/about" exact component={AboutPage} />
+                                        <Redirect from='*' to='/' />
+                                    </Switch>
+                                )}
+                            />
+                        </div>
+                        <Footer content={this.mainContent}/>
+                    </LastLocationProvider>
                 </BrowserRouter>
             </div>
         );

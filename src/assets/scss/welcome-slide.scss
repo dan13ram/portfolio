@@ -22,28 +22,7 @@
         font-size: 3vh;
         flex-grow: 1;
     }
-    #scroll-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        max-width: 100%;
-        height: 10vh;
-        #scroll-img {
-            height: 6vh;
-            background: transparent;
-            transition: 0.5s;
-        }
-        &:hover {
-            cursor: pointer;
-        }
-        &:hover > #scroll-img {
-            height: 6.5vh;
-        }
-    }
-
-    transition-property: transform;
-    transition-duration: 1s; 
+    transition: transform 1s ease-in-out;
     &.open {
         transform: translateY(-100%);
     }

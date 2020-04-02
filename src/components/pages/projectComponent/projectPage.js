@@ -14,20 +14,25 @@ function ProjectPage (props) {
     if (id in data) {
         let work = data[id];
         return (
-            <div className="project-page-container" ref={projectPage}> 
-                <div className="project-page"> 
+            <div className="project-page" ref={projectPage}> 
+                <div className="project-header"> 
                     <div className="project-title"> 
                         <span> {work.title} </span>
                     </div>
+                    <div className="project-subtitle"> 
+                        <span> {work.subtitle} </span>
+                    </div>
                     <div className="project-description">
-                        <span> {work.description} </span>
+                        <span> {work.description.repeat(10)} </span>
                     </div>
                 </div> 
+                <div className="project-content"> 
                 {
                     work.content.map((item, i) => (
                         <Tile key={i.toString()} item={item} />
                     ))
                 }
+                </div> 
             </div>
         );
     } else {

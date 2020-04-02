@@ -1,44 +1,78 @@
-.project-page-container {
-    scroll-snap-align: start;  
+@import 'config';
+.project-page {
     width: 100vw;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    .project-page {
+    min-height: 100vh;
+    padding-bottom: 5vh;
+    .project-header {
+        scroll-snap-align: start;  
         width: 90vw;
-        max-width: 1200px;
-        height: 20vh;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         .project-title {
             font-size: 4vh;
-            height: 10vh;
+            padding: 2vh 2vw 1vh 2vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .project-subtitle {
+            font-size: 2vh;
             display: flex;
             justify-content: center;
             align-items: center;
         }
         .project-description {
-            width: 60vw;
+            width: 80vw;
+            padding: 2vh 2vw 1vh 2vw;
+            display: flex;
+            justify-content: center;
         }
     }
-    .tile-container {
-        padding: 10vh;
-        width: 90vw;
-        max-width: 1200px;
+    .project-content {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        .video-tile {
-            width: 100%;
-            height: 60vh;
-        }
-        .img-tile {
-            width: 107vh;
-            max-width: 90%;
-            height: auto;
+        .tile {
+            scroll-snap-align: end;  
+            width: 80vw;
+            padding: 5vh 10vw 5vh 10vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .video-tile {
+                width: 60vw;
+                .video-tile-inner {
+                    position: relative;
+                    padding-top: 56.25%;
+                    opacity: 0;
+                    transition-delay: 0.25s;
+                    &.ready {
+                        opacity: 1;
+                    }
+                    .react-player {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+            .img-tile {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img {
+                    width: 60vw;
+                    height: auto;
+                }
+            }
         }
     }
 }
