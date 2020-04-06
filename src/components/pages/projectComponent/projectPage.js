@@ -20,11 +20,11 @@ function ProjectPage (props) {
                     <div className="project-title"> 
                         <span> {work.title} </span>
                     </div>
-                    <div className="project-year"> 
-                        <span> {work.year} </span>
-                    </div>
                     <div className="project-subtitle"> 
                         <span> {work.subtitle} </span>
+                    </div>
+                    <div className="project-year"> 
+                        <span> {work.year} </span>
                     </div>
                     <div className="project-description">
                         <span> {workDescription} </span>

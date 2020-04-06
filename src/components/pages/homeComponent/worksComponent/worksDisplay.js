@@ -39,11 +39,11 @@ function WorkView(props) {
                 <div className="work-title">
                     <span> {work.title} </span>
                 </div>
-                <div className="work-year">
-                    <span> {work.year} </span>
-                </div>
                 <div className="work-subtitle">
                     <span> {work.subtitle} </span>
+                </div>
+                <div className="work-year">
+                    <span> {work.year} </span>
                 </div>
                 </div>
             </div>
