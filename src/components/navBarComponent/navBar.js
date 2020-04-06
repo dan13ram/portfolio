@@ -73,7 +73,7 @@ function WorkItem(props) {
         <div className="workitem" onClick={props.toggleOpen}>
             <Link to={"/project/"+work.url}> 
                 <p className="workitem-title"> {work.title} </p>
-                <p className="workitem-desc"> {work.subtitle} </p>
+                <p className="workitem-desc"> {work.subtitle} ({work.year}) </p>
             </Link>
         </div>
     );

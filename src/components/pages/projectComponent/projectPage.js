@@ -13,17 +13,21 @@ function ProjectPage (props) {
     let { id } = useParams();
     if (id in data) {
         let work = data[id];
+        let workDescription = work.description.split ('\n').map ((item, i) => <p key={i}>{item}</p>);
         return (
             <div className="project-page" ref={projectPage}> 
                 <div className="project-header"> 
                     <div className="project-title"> 
                         <span> {work.title} </span>
                     </div>
+                    <div className="project-year"> 
+                        <span> {work.year} </span>
+                    </div>
                     <div className="project-subtitle"> 
                         <span> {work.subtitle} </span>
                     </div>
                     <div className="project-description">
-                        <span> {work.description.repeat(10)} </span>
+                        <span> {workDescription} </span>
                     </div>
                 </div> 
                 <div className="project-content"> 

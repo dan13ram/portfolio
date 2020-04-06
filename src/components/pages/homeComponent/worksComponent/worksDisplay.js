@@ -23,11 +23,12 @@ function WorkView(props) {
     let work = data[props.value];
 
     let backgroundStyle = {
-        backgroundImage:`url(${work.cover})` 
+        backgroundImage:`url("${work.cover}")` 
     };
     const history = useHistory();
 
     function openPage() {
+        console.log(work.cover);
         history.push("/project/"+work.url);
     }
 
@@ -37,6 +38,9 @@ function WorkView(props) {
                 <div className="workview-content">
                 <div className="work-title">
                     <span> {work.title} </span>
+                </div>
+                <div className="work-year">
+                    <span> {work.year} </span>
                 </div>
                 <div className="work-subtitle">
                     <span> {work.subtitle} </span>

@@ -52,10 +52,18 @@
             transition: 0.5s;
             font-size: 1.8vh;
         }
+        .work-year {
+            transition: 0.5s;
+            font-size: 2vh;
+        }
         &:hover{
             .work-title {
                 color: $darkgrey;
                 font-size: 4.2vh;
+            }
+            .work-year {
+                color: $darkgrey;
+                font-size: 2.2vh;
             }
             .work-subtitle {
                 color: $darkgrey;
