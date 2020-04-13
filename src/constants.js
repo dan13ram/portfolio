@@ -2,10 +2,16 @@ import sixelements from './assets/img/sixelements.webp';
 import trance from './assets/img/trance.webp';
 
 // foliage collage project
-import wall from './assets/img/foliage/wall.webp';
-import relief from './assets/img/foliage/relief.webp';
-import pond from './assets/img/foliage/pond.webp';
-import stones from './assets/img/foliage/stones.webp';
+import foliage00 from './assets/img/foliage/floral_relief.webp'
+import foliage01 from './assets/img/foliage/green_wall_detail.webp'
+import foliage02 from './assets/img/foliage/landscape_cover.webp'
+import foliage03 from './assets/img/foliage/stones.webp'
+import foliage04 from './assets/img/foliage/turmeric_1.webp'
+import foliage05 from './assets/img/foliage/taj_mahal_pond.webp'
+import foliage06 from './assets/img/foliage/wall_detail_2.webp'
+import foliage07 from './assets/img/foliage/wall_detail_4.webp'
+import foliage08 from './assets/img/foliage/wall_detail_5.webp'
+import foliage09 from './assets/img/foliage/wall_detail_6.webp'
 
 // parenting absolute
 import parenting00 from './assets/img/parenting/building the right connect.webp';
@@ -94,7 +100,7 @@ export const data = {
         ]
     },
     foliage: {
-        cover: wall,
+        cover: foliage02,
         url: "foliage",
         title: "foliage collage project",
         year: "2019",
@@ -102,16 +108,44 @@ export const data = {
         description: "It is a collage of foliage titled \"foliage collage project\".",
         content: [
             { type: "image",
-                url: relief
+                url: foliage00,
+                square: false
             },
             { type: "image",
-                url: wall
+                url: foliage01,
+                square: false
             },
             { type: "image",
-                url: pond
+                url: foliage02,
+                square: false
             },
             { type: "image",
-                url: stones
+                url: foliage03,
+                square: false
+            },
+            { type: "image",
+                url: foliage04,
+                square: false
+            },
+            { type: "image",
+                url: foliage05,
+                square: false
+            },
+            { type: "image",
+                url: foliage06,
+                square: false
+            },
+            { type: "image",
+                url: foliage07,
+                square: false
+            },
+            { type: "image",
+                url: foliage08,
+                square: false
+            },
+            { type: "image",
+                url: foliage09,
+                square: false
             }
         ]
     },
