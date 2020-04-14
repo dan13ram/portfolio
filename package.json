@@ -11,6 +11,7 @@
     "normalize-scss": "^7.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-image-gallery": "^1.0.7",
     "react-player": "^1.15.3",
     "react-router-dom": "^5.1.2",
     "react-router-last-location": "^2.0.1",

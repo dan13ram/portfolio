@@ -37,9 +37,9 @@ export const data = {
         title: "six elements",
         year: "2019",
         subtitle: "animated clip",
-        description: "It is a short video titled \"six elements\".",
         content: [
-            { type: "video",
+            { 
+                type: "video",
                 url: "https://vimeo.com/327434482"
             }
         ]
@@ -52,49 +52,64 @@ export const data = {
         subtitle: "book illustration",
         description: "Digital Illustrations for an informative book on parenthood and its many challenges.\nThese illustrations attempt to explain the theme of each chapter subtly using body language, form, text and symbolism and are void of facial expressions.",
         content: [
-            { type: "image",
+            { 
+                type: "image",
                 url: parenting00
             },
-            { type: "image",
+            { 
+                type: "image",
                 url: parenting01
             },
-            { type: "image",
+            { 
+                type: "image",
                 url: parenting02
             },
-            { type: "image",
+            { 
+                type: "image",
                 url: parenting03
             },
-            { type: "image",
+            { 
+                type: "image",
                 url: parenting04
             },
-            { type: "image",
+            { 
+                type: "image",
                 url: parenting05
             },
-            { type: "image",
+            { 
+                type: "image",
                 url: parenting06
             },
-            { type: "image",
+            { 
+                type: "image",
                 url: parenting07
             },
-            { type: "image",
+            { 
+                type: "image",
                 url: parenting08
             },
-            { type: "image",
+            { 
+                type: "image",
                 url: parenting09
             },
-            { type: "image",
+            { 
+                type: "image",
                 url: parenting10
             },
-            { type: "image",
+            { 
+                type: "image",
                 url: parenting11
             },
-            { type: "image",
+            { 
+                type: "image",
                 url: parenting12
             },
-            { type: "image",
+            { 
+                type: "image",
                 url: parenting13
             },
-            { type: "image",
+            { 
+                type: "image",
                 url: parenting14
             }
         ]
@@ -103,49 +118,28 @@ export const data = {
         cover: foliage02,
         url: "foliage",
         title: "foliage collage project",
-        year: "2019",
-        subtitle: "illustration",
-        description: "It is a collage of foliage titled \"foliage collage project\".",
+        year: "2019-20",
+        subtitle: "mixed media illustration",
+        description: "A mixed media series that indulges in the phenomenon of Ruinenlust. Illustrations and images of foliage overlaid on to photographic images of barren and broken structures/textures.\nI am attempting to convey the absence of human intervention in spaces as a type of aesthetic language in itself.",
         content: [
-            { type: "image",
-                url: foliage00,
-                square: false
-            },
-            { type: "image",
-                url: foliage01,
-                square: false
-            },
-            { type: "image",
-                url: foliage02,
-                square: false
-            },
-            { type: "image",
-                url: foliage03,
-                square: false
-            },
-            { type: "image",
-                url: foliage04,
-                square: false
-            },
-            { type: "image",
-                url: foliage05,
-                square: false
-            },
-            { type: "image",
-                url: foliage06,
-                square: false
-            },
-            { type: "image",
-                url: foliage07,
-                square: false
-            },
-            { type: "image",
-                url: foliage08,
-                square: false
-            },
-            { type: "image",
-                url: foliage09,
-                square: false
+            { 
+                type: "foliage",
+                landscape: [
+                    foliage02,
+                    foliage06,
+                    foliage07
+                ],
+                portrait: [
+                    foliage09,
+                    foliage08,
+                    foliage00,
+                    foliage04
+                ],
+                square: [
+                    foliage05,
+                    foliage03,
+                    foliage01
+                ]
             }
         ]
     },
@@ -155,9 +149,9 @@ export const data = {
         title: "trance",
         year: "2019",
         subtitle: "animated clip",
-        description: "It is a short video titled \"trance\".",
         content: [
-            { type: "video",
+            { 
+                type: "video",
                 url: "https://vimeo.com/327432211"
             }
         ]

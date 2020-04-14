@@ -1,48 +1,147 @@
 @import 'config';
+
 .project-page {
-    width: 100vw;
+    width: 85vw;
     display: flex;
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
+    margin-left: 7.5vw;
+    margin-right: 7.5vw;
     padding-bottom: 5vh;
     .project-header {
+        width: 100%;
         scroll-snap-align: start;  
-        width: 90vw;
+        padding-top: 2.5vh;
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         flex-direction: column;
         .project-title {
-            font-size: 4vh;
-            padding: 2vh 2vw 1vh 2vw;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            width: 50%;
+            font-size: 4vh;
         }
         .project-subtitle {
-            font-size: 2vh;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            width: 50%;
+            font-size: 2vh;
+        }
+        .project-year {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            font-size: 2.2vh;
         }
         .project-description {
-            width: 80vw;
-            padding: 2vh 2vw 1vh 2vw;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            justify-content: center;
+            width: 50%;
+            font-size: 1.8vh;
         }
     }
     .project-content {
+        width: 80vw;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        .tile {
-            scroll-snap-align: end;  
-            width: 80vw;
-            padding: 5vh 10vw 5vh 10vw;
+        .foliage-container {
+            .gallery-wrapper {
+                position: relative;
+                .gallery {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    height: 100vh;
+                    width: 100vw;
+                    z-index: 2;
+                    background: $white-back;
+                    transform: none;
+                    opacity: 1;
+                    transition: opacity 0.5s;
+                    &.closed {
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                    .gallery-inner {
+                        position: fixed;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+            margin-bottom: 5vh;
+            display: flex;
+            .foliage-left {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 37.5%;
+                margin-right: 2.5%;
+            }
+            .foliage-right {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 57.5%;
+                margin-left: 2.5%;
+            }
+            .img-container {
+                margin-top: 5vh;
+                position: relative;
+                .img-overlay {
+                    &:hover {
+                        cursor: pointer;
+                        box-shadow: 10px -10px 5px 0px $grey;
+                    }
+                    display: block;
+                    z-index: 1;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+                img {
+                    width: 100%;
+                    height: auto;
+                    bottom: 0;
+                    top: auto;
+                }
+            }
+        }
+        .img-tile {
+            padding: 5vh 0 5vh 0;
+            width: 60vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .img-container {
+                position: relative;
+                .img-overlay {
+                    display: block;
+                    z-index: 1;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        .video-tile-container {
+            width: 100%;
+            padding: 5vh 0 5vh 0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -64,15 +163,6 @@
                         right: 0;
                         bottom: 0;
                     }
-                }
-            }
-            .img-tile {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                img {
-                    width: 60vw;
-                    height: auto;
                 }
             }
         }

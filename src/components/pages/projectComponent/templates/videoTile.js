@@ -14,7 +14,7 @@ class VideoTile extends React.Component {
 
     render () {
         return (
-            <div className="tile"> 
+            <div className="video-tile-container">
                 <div className="video-tile"> 
                     <div className="video-tile-inner" ref={this.player}> 
                         <ReactPlayer
