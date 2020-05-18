@@ -17,7 +17,7 @@ $breakpoint-tablet: 40rem;
     top: 0;
     bottom: 0;
     margin: auto;
-    height: 100vh;
+    height: 100%;
     border-radius: 0 10px 10px 0;
     width: 5rem;
     max-width: 100vw;
@@ -290,7 +290,7 @@ $breakpoint-tablet: 40rem;
             left: 0;
             top: 0;
             bottom: 0;
-            height: 100vh;
+            height: 100%;
             width: 100vw;
             border-radius: 0 0 0 0;
             .nav-links-container {
