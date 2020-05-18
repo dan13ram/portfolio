@@ -21,10 +21,10 @@ class NavBar extends React.Component {
     }
 
     toggleOpen = (event) => {
-
         this.navBar.current.classList.toggle("open");
         this.workItems.current.classList.toggle("closed");
         this.logoText.current.classList.toggle("closed");
+        this.setState({open: !this.state.open});
     }
 
     render () {
@@ -37,6 +37,9 @@ class NavBar extends React.Component {
                     <Link to="/" className="logo-txt closed" ref={this.logoText}>
                         littlehoodedcreature
                     </Link>
+                </div>
+                <div className="menu-toggle" onClick={this.toggleOpen}>
+                    &#x25BE;
                 </div>
                 <div className="nav-links-container"> 
                     <div className="work-link">

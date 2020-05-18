@@ -1,13 +1,13 @@
-@import 'config';
+@import "config";
 
-$navBarWidth: 20vw;
+$navBarWidth: 21rem;
+$breakpoint-tablet: 40rem;
 
 .nav-bar {
-
     z-index: 3;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     opacity: 1;
     box-shadow: 0 0 4px #898989;
@@ -19,18 +19,30 @@ $navBarWidth: 20vw;
     margin: auto;
     height: 100vh;
     border-radius: 0 10px 10px 0;
-    width: 75px;
+    width: 5rem;
+    max-width: 100vw;
     overflow-x: hidden;
     transition: 0.25s ease-in-out;
+    .menu-toggle {
+        display: flex;
+        position: fixed;
+        top: 0rem;
+        height: 5rem;
+        right: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.25s ease-in-out 0.25s, color 0.25s ease-in-out, transform 0.25s ease-in-out;
+    }
 
     .logo-container {
         display: flex;
         align-items: center;
-        align-self: flex-start;
-        margin-left: 1vw;
         justify-content: flex-start;
+        margin: 0.5rem;
 
-        height: 8vh;
+        height: 4rem;
         a {
             height: inherit;
             text-decoration: none;
@@ -39,9 +51,10 @@ $navBarWidth: 20vw;
             align-items: center;
             justify-content: center;
         }
-        .logo-txt { 
+        .logo-txt {
             color: $grey;
-            font-size: min(1.2vw, 1.8vw);
+            font-size: 1.125 * 1.125 * 1.125rem;
+            margin-left: 0.25rem;
             &.closed {
                 display: none;
             }
@@ -49,12 +62,12 @@ $navBarWidth: 20vw;
             &:hover {
                 color: $darkgrey;
             }
-        } 
+        }
 
         #logo-img {
             margin: 0;
             display: block;
-            height: 6vh;
+            height: 3.5rem;
             background: transparent;
             -webkit-filter: drop-shadow(0px 0px 10px #ffffff);
             filter: drop-shadow(0px 0px 10px #ffffff);
@@ -66,38 +79,39 @@ $navBarWidth: 20vw;
                 g {
                     fill: $darkpink;
                 }
-
             }
-
         }
     }
 
     .nav-links-container {
-        height: 77vh;
-        margin-top: 2vh;
-        margin-bottom: 2vh;
+        border-style: solid none solid none;
+        border-width: 1px;
+        border-color: $grey_02;
+        flex: 1;
+        margin: 0 0.5rem 0 0.5rem;
+        padding: 0.5rem 0 0.5rem 0;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        width: 100%;
+        align-items: stretch;
+        justify-content: flex-start;
+        width: auto;
         flex-grow: 1;
         transition: 0.25s ease-in-out;
         .work-link {
-            margin-left: 1vw;
-            align-self: flex-start;
             display: flex;
             .nav-toggle {
                 color: $pink;
-                right: 0;
+                font-size: 1.125 * 1.125 * 1.125rem;
+                margin-left: 0.5rem;
                 cursor: pointer;
                 transition: 0.25s ease-in-out;
-                &:hover{
+                &:hover {
                     color: $darkpink;
                 }
             }
-            margin-top: 1vh;
-            display: flex;
             a {
+                display: flex;
+                align-items: center;
                 color: $grey;
                 text-decoration: none;
                 &.active {
@@ -108,53 +122,48 @@ $navBarWidth: 20vw;
                     color: $darkgrey;
                 }
             }
-            font-size: 2vh;
+            font-size: 1.125 * 1.125rem;
             color: $grey;
         }
         .about-link {
-            margin-bottom: 1vh;
             display: flex;
             color: $grey;
             text-decoration: none;
-            font-size: 2vh;
+            font-size: 1.125 * 1.125rem;
             align-self: flex-start;
-            margin-left: 1vw;
             &.active {
                 font-weight: bold;
             }
             transition: 0.25s ease-in-out;
             &:hover {
                 color: $darkgrey;
-
             }
         }
         .work-items {
             background: $purewhite;
-            margin-top: 1vh;
-            margin-bottom: 1vh;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
             flex-grow: 1;
-            width: $navBarWidth - 2vw;
-            max-width: $navBarWidth - 2vw;
             overflow-x: hidden;
             overflow-y: scroll;
             transition: 0.25s ease-in-out;
             .workitem {
                 display: flex;
                 align-items: center;
-                height: 10vh;
+                height: 4rem;
                 margin: 0;
-                padding: 0 1vw 0 1vw;
-                .workitem-title{
+                padding: 0 0.5rem 0 0.5rem;
+                .workitem-title {
                     padding: 0;
                     margin: 0;
-                    font-size: 1.8vh;
+                    font-size: 1rem;
                 }
                 .workitem-desc {
                     opacity: 0.7;
                     padding: 0;
                     margin: 0;
-                    padding-left: 1vw;
-                    font-size: 1.5vh;
+                    padding-left: 0.5rem;
+                    font-size: 1rem / (1.125 * 1.125);
                 }
                 a {
                     color: $grey;
@@ -166,7 +175,7 @@ $navBarWidth: 20vw;
                 }
             }
             &.closed {
-                flex-grow:  0;
+                flex-grow: 0;
                 max-height: 0;
             }
             &::-webkit-scrollbar {
@@ -190,22 +199,22 @@ $navBarWidth: 20vw;
         }
     }
     .follow-links {
-        margin-left: 1vw;
-        align-self: flex-start;
-        height: 9vh;
+        margin: 0.5rem;
+        height: 4rem;
         display: flex;
         align-items: flex-start;
         justify-content: flex-end;
         flex-direction: column;
 
         .follow-img {
+            margin-top: 0.5rem;
+            margin-left: 1rem;
             background: transparent;
-            padding-bottom: 2vh;
-            height: 2.5vh;
+            height: 1.125 * 1.125 * 1.125rem;
             g {
                 fill: $grey;
+                transition: 0.25s ease-in-out;
             }
-            transition: 0.25s ease-in-out;
             &:hover {
                 g {
                     fill: $darkgrey;
@@ -214,14 +223,81 @@ $navBarWidth: 20vw;
         }
     }
 
-    &.open{
+    &.open {
         width: $navBarWidth;
-        align-items: flex-start;
         .work-link {
-            width: $navBarWidth - 2vw;
             justify-content: space-between;
             .nav-toggle {
                 transform: rotate(90deg);
+            }
+        }
+        .follow-links {
+            align-items: center;
+            justify-content: flex-start;
+            height: 2.5rem;
+            flex-direction: row;
+            .follow-img {
+                margin-top: 0rem;
+                margin-right: 0.5rem;
+                margin-left: 0rem;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .nav-bar {
+        .nav-toggle {
+            display: none;
+        }
+        .menu-toggle {
+            color: $pink;
+            opacity: 1;
+            visibility: visible;
+            font-size: 2rem;
+            &:hover {
+                cursor: pointer;
+                color: $darkpink;
+            }
+        }
+        .logo-container {
+            .logo-txt {
+                &.closed {
+                    display: flex;
+                }
+            }
+        }
+        left: 0;
+        top: 0;
+        right: 0;
+        height: 5rem;
+        margin: 0;
+        border-radius: 0 0 10px 10px;
+        width: 100vw;
+        flex-direction: row;
+        justify-content: space-between;
+        .follow-links {
+            display: none;
+        }
+        .nav-links-container {
+            display: none;
+        }
+        &.open {
+            .menu-toggle {
+                transform: rotate(180deg);
+            }
+            flex-direction: column;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            height: 100vh;
+            width: 100vw;
+            border-radius: 0 0 0 0;
+            .nav-links-container {
+                display: flex;
+            }
+            .follow-links {
+                display: flex;
             }
         }
     }

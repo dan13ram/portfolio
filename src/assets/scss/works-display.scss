@@ -16,7 +16,7 @@
     height: 100vh;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: center;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
@@ -27,7 +27,7 @@
 
 .workview {
     opacity: 0;
-    width: 50%;
+    width: 60%;
     height: 60%;
     border-radius: 10px;
     background: $purewhite no-repeat center center;
@@ -46,28 +46,28 @@
         opacity: 1;
         .work-title {
             transition: 0.5s;
-            font-size: 4vh;
+            font-size: 1.125 * 1.125 * 1.125 * 1.125rem;
         }
         .work-subtitle {
             transition: 0.5s;
-            font-size: 1.8vh;
+            font-size: 1.125rem;
         }
         .work-year {
             transition: 0.5s;
-            font-size: 2vh;
+            font-size: 1.125 * 1.125rem;
         }
         &:hover{
             .work-title {
                 color: $darkgrey;
-                font-size: 4.2vh;
+            font-size: 1.125 * 1.125 * 1.125 * 1.125 * 1.125rem;
             }
             .work-year {
                 color: $darkgrey;
-                font-size: 2.2vh;
+            font-size: 1.125 * 1.125 * 1.125rem;
             }
             .work-subtitle {
                 color: $darkgrey;
-                font-size: 2vh;
+            font-size: 1.125 * 1.125rem;
             }
         }
 
