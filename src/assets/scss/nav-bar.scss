@@ -24,6 +24,8 @@ $breakpoint-tablet: 40rem;
     overflow-x: hidden;
     transition: 0.25s ease-in-out;
     .menu-toggle {
+        color: $pink;
+        font-size: 4rem;
         display: flex;
         position: fixed;
         top: 0rem;
@@ -251,10 +253,8 @@ $breakpoint-tablet: 40rem;
             display: none;
         }
         .menu-toggle {
-            color: $pink;
             opacity: 1;
             visibility: visible;
-            font-size: 2rem;
             &:hover {
                 cursor: pointer;
                 color: $darkpink;
